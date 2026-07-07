@@ -1,0 +1,14 @@
+# Ignore Projects directory (as they are independent git repos)
+Projects/
+# Ignore all papers inside 02-Papers but keep the folder structure
+02-Papers/*
+!02-Papers/.gitkeep
+
+# Ignore Obsidian internal workspace config (prevents conflicts when syncing across different screens/computers)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/backups/
+
+# Ignore system junk files
+.DS_Store
+Thumbs.db
