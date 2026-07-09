@@ -27,6 +27,8 @@ created: "{{dateAdded | format('YYYY-MM-DD')}}"
 
 ## 📝 Review Notes
 
+{% persist "notes" %}
+{% if isFirstImport %}
 ### 1. Problem
 *What problem is the paper trying to solve? Why are current methods not good enough?*
 
@@ -56,6 +58,8 @@ created: "{{dateAdded | format('YYYY-MM-DD')}}"
 
 ### 10. Future Work
 *Future research directions suggested by the authors.*
+{% endif %}
+{% endpersist %}
 
 ---
 
@@ -66,7 +70,17 @@ created: "{{dateAdded | format('YYYY-MM-DD')}}"
 {% if annotation.annotatedText %}
 > [!quote] **Highlight (Page {{annotation.pageLabel}})**
 > {{annotation.annotatedText}}
+{% if annotation.comment %}
 > 
 > *Your Comment:* {{annotation.comment}}
 {% endif %}
+{% elif annotation.imageRelativePath %}
+> [!image] **Image Highlight (Page {{annotation.pageLabel}})**
+> ![[{{annotation.imageRelativePath}}]]
+{% if annotation.comment %}
+> 
+> *Your Comment:* {{annotation.comment}}
+{% endif %}
+{% endif %}
 {% endfor %}
+

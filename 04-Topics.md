@@ -10,7 +10,7 @@ Use this page to keep track of the main research topics, keywords, and academic 
   - [ ] Sub-topic A
   - [ ] Sub-topic B
 * **Important Papers**:
-  - [[VulnHunterX]]
+  - [[paper]]
 
 ---
 

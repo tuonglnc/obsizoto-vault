@@ -1,10 +1,11 @@
 ---
 project_name: "{{title}}"
-status: proposed # proposed, active, completed, suspended
-start_date: {{date}}
-target_date: 
-github_repo: 
-advisor: 
+status: proposed
+start_date:
+  "{ date }":
+target_date:
+github_repo:
+advisor:
 collaborators: []
 ---
 
